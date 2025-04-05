@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "aside1 content aside2"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            font-size: 16px;
+           
+        }
+        header {
+            grid-area: header;
+            background: rgb(230, 111, 7);
+            padding: 10px;
+            text-align: center;
+        }
+        .aside1 {
+            grid-area: aside1;
+            background: yellow;
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            grid-area: content;
+            background: rgb(99, 204, 239);
+            text-align: center;
+        }
+        .aside2 {
+            grid-area: aside2;
+            background: rgb(224, 105, 186);
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            grid-area: footer;
+            background: rgb(100, 224, 100);
+            padding: 10px;
+            text-align: center;
+        }
+        @media (max-width: 1200px) {
+            body {
+                grid-template-areas: 
+                    "header header"
+                    "content content"
+                    "aside1 aside2"
+                    "footer footer";
+                grid-template-columns: 1fr 1fr;
+               
+
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                grid-template-areas: 
+                    "header"
+                    "content"
+                    "aside1"
+                    "aside2"
+                    "footer";
+                grid-template-columns: 1fr;
+                font-size: 20px;
+            }
+        }
+        .img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <div class="aside2">Aside 1</div>
+    <main>Mô dun Flexbox Layout (Flexible Box) (Theo khuyến nghị của W3C kể từ tháng 10 năm 2017) nhảm mục đích cung cắp một cách bồ tri, sáp xếp và phân phối không gian hiệu quả hơn các item trong trong một container, ngay cà khi kích thước của chúng không xác
+        dinh hoge dong ( Do do cé tir 'Nex").
+    <img src="cay.png">
+    </main>
+    <div class="aside1">Aside 2</div>
+    <footer>Footer</footer>
+</body>
+</html>
